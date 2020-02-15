@@ -10,6 +10,11 @@
 		4D2B51F123F5DA0900CDBEFA /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D2B51F023F5DA0900CDBEFA /* SFProText-Semibold.ttf */; };
 		4D2B51F323F5DA7300CDBEFA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51F223F5DA7300CDBEFA /* UILabel+Extension.swift */; };
 		4D2B51F523F5E03400CDBEFA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51F423F5E03400CDBEFA /* UIView+Extension.swift */; };
+		4D2B51F823F66F6F00CDBEFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51F723F66F6F00CDBEFA /* Constants.swift */; };
+		4D2B51FA23F6E4C600CDBEFA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51F923F6E4C600CDBEFA /* UIColor+Extension.swift */; };
+		4D2B51FC23F7385500CDBEFA /* PresetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51FB23F7385500CDBEFA /* PresetsViewController.swift */; };
+		4D2B51FE23F74ACF00CDBEFA /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51FD23F74ACF00CDBEFA /* TimerViewController.swift */; };
+		4D2B520023F7B6A500CDBEFA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B51FF23F7B6A500CDBEFA /* SettingsViewController.swift */; };
 		4DC9F66623F5AD6A0039095C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9F65C23F5AD6A0039095C /* AppDelegate.swift */; };
 		4DC9F66723F5AD6A0039095C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC9F65D23F5AD6A0039095C /* Assets.xcassets */; };
 		4DC9F66823F5AD6A0039095C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC9F65E23F5AD6A0039095C /* LaunchScreen.storyboard */; };
@@ -26,6 +31,11 @@
 		4D2B51F023F5DA0900CDBEFA /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.ttf"; sourceTree = "<group>"; };
 		4D2B51F223F5DA7300CDBEFA /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		4D2B51F423F5E03400CDBEFA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4D2B51F723F66F6F00CDBEFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4D2B51F923F6E4C600CDBEFA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4D2B51FB23F7385500CDBEFA /* PresetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetsViewController.swift; sourceTree = "<group>"; };
+		4D2B51FD23F74ACF00CDBEFA /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		4D2B51FF23F7B6A500CDBEFA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4DC9F64023F545860039095C /* Dreamahine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreamahine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC9F65C23F5AD6A0039095C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC9F65D23F5AD6A0039095C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +61,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2B51F623F66EA400CDBEFA /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4D786CA323F7CCBA0003478B /* TableViews */,
+				4D786CA423F7CCBA0003478B /* TableViewCells */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		4D786CA323F7CCBA0003478B /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		4D786CA423F7CCBA0003478B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		4DC9F63723F545860039095C = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC9F65823F5AD6A0039095C /* ViewController */,
-				4DC9F65723F5AD6A0039095C /* CustomeClasses */,
+				4D2B51F623F66EA400CDBEFA /* CustomClasses */,
 				4DC9F65923F5AD6A0039095C /* Controls */,
 				4DC9F65A23F5AD6A0039095C /* Models */,
 				4DC9F66523F5AD6A0039095C /* Utils */,
@@ -80,18 +113,14 @@
 			path = Dreamahine;
 			sourceTree = "<group>";
 		};
-		4DC9F65723F5AD6A0039095C /* CustomeClasses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomeClasses;
-			sourceTree = "<group>";
-		};
 		4DC9F65823F5AD6A0039095C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				4DC9F66D23F5B16F0039095C /* MainViewController.swift */,
+				4D2B51FB23F7385500CDBEFA /* PresetsViewController.swift */,
+				4D2B51FD23F74ACF00CDBEFA /* TimerViewController.swift */,
 				4DC9F66F23F5BF1E0039095C /* OnboardingViewController.swift */,
+				4D2B51FF23F7B6A500CDBEFA /* SettingsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -127,8 +156,10 @@
 		4DC9F66523F5AD6A0039095C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4D2B51F723F66F6F00CDBEFA /* Constants.swift */,
 				4D2B51F223F5DA7300CDBEFA /* UILabel+Extension.swift */,
 				4D2B51F423F5E03400CDBEFA /* UIView+Extension.swift */,
+				4D2B51F923F6E4C600CDBEFA /* UIColor+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -219,12 +250,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2B51FE23F74ACF00CDBEFA /* TimerViewController.swift in Sources */,
 				4D2B51F523F5E03400CDBEFA /* UIView+Extension.swift in Sources */,
+				4D2B520023F7B6A500CDBEFA /* SettingsViewController.swift in Sources */,
 				4DC9F66623F5AD6A0039095C /* AppDelegate.swift in Sources */,
 				4DC9F66B23F5AD6A0039095C /* SceneDelegate.swift in Sources */,
 				4D2B51F323F5DA7300CDBEFA /* UILabel+Extension.swift in Sources */,
+				4D2B51F823F66F6F00CDBEFA /* Constants.swift in Sources */,
 				4DC9F66E23F5B16F0039095C /* MainViewController.swift in Sources */,
 				4DC9F67023F5BF1E0039095C /* OnboardingViewController.swift in Sources */,
+				4D2B51FA23F6E4C600CDBEFA /* UIColor+Extension.swift in Sources */,
+				4D2B51FC23F7385500CDBEFA /* PresetsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
