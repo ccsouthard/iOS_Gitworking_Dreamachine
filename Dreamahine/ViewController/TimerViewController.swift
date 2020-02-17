@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol TimerViewControllerDelegate:class {
+protocol TimerViewControllerDelegate: class {
     func cancelClicked(_ controller: TimerViewController)
-    func setTimerClicked(_ controller: TimerViewController, date: Date)
+    func setTimerClicked(_ controller: TimerViewController, time: TimeInterval)
 }
 
 class TimerViewController: UIViewController {
@@ -24,9 +24,9 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    func setupTimer(date: Date?) {
-        if let date = date {
-            self.timePickerView.date = date
+    func setupTimer(time: TimeInterval?) {
+        if let time = time {
+            self.timePickerView.countDownDuration = time
         }
         
         self.timerView.frame.origin.y = self.view.frame.size.height
@@ -44,7 +44,7 @@ class TimerViewController: UIViewController {
             if cancel {
                 self.delegate?.cancelClicked(self)
             } else {
-                self.delegate?.setTimerClicked(self, date: self.timePickerView.date)
+                self.delegate?.setTimerClicked(self, time: self.timePickerView.countDownDuration)
             }
         }
     }

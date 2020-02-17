@@ -17,6 +17,10 @@ let THRESHOLD_THETA_ALPHA: Float = 8.0
 let THRESHOLD_ALPHA_BETA: Float = 12.0
 let THRESHOLD_BETA_GAMMA: Float = 40.0
 
+let MAIN_BLACK_COLOR: String = "99000000"
+
+let STRING_USED_PRESETS: String = "used_presets"
+
 let FREQUENCY_DESCRIPTION: [String: String] = [
     "delta": "Delta: Deep Sleep",
     "theta": "Theta: Hypnagogic Imagery/Meditation",
@@ -26,21 +30,21 @@ let FREQUENCY_DESCRIPTION: [String: String] = [
 ]
 
 let COLORS: [String] = [
-    "00A7F7",
-    "3E4EB8",
-    "6734BA",
-    "00BCD6",
-    "47B04B",
-    "FFED18",
-    "FEC100",
-    "FE9800",
-    "EC1561",
-    "9D1BB2",
-    "212121",
-    "9E9E9E"
+    "FF7272",
+    "FF9272",
+    "FFC772",
+    "EBE325",
+    "90D31C",
+    "21D67F",
+    "32D4D8",
+    "70BDF8",
+    "3D86F1",
+    "9F87FD",
+    "CB87FD",
+    "FC79D7"
 ]
 
-let mainBlackColor:String = "99000000"
+
 enum FrequencyType: Int
 {
     case
@@ -51,10 +55,8 @@ enum FrequencyType: Int
     gamma,
     none
 
-    var title: String
-    {
-        switch self
-        {
+    var title: String {
+        switch self {
         case .delta:
             return "δ"
         case .theta:
@@ -70,10 +72,8 @@ enum FrequencyType: Int
         }
     }
     
-    var maxFrequency: Float
-    {
-        switch self
-        {
+    var maxFrequency: Float {
+        switch self {
         case .delta:
             return 4.0
         case .theta:
@@ -88,4 +88,69 @@ enum FrequencyType: Int
             return 1.0
         }
     }
+    
+    var description: String {
+        switch self {
+        case .delta:
+            return "Delta"
+        case .theta:
+            return "Theta"
+        case .alpha:
+            return "Alpha"
+        case .beta:
+            return "Beta"
+        case .gamma:
+            return "Gamma"
+        default:
+            return ""
+        }
+    }
 }
+
+enum NoiseType: Int {
+    case
+    pink,
+    white,
+    rain,
+    none
+    
+    var title: String {
+        switch self {
+        case .pink:
+            return "Pink Noise"
+        case .white:
+            return "White Noise"
+        case .rain:
+            return "Rain Noise"
+        case .none:
+            return ""
+        }
+    }
+    
+    var fileName: String {
+        switch self {
+        case .pink:
+            return "Sounds/pink_noise"
+        case .white:
+            return "Sounds/white_noise"
+        case .rain:
+            return "Sounds/rain_noise"
+        case .none:
+            return ""
+        }
+    }
+    
+    var fileType: String {
+        switch self {
+        case .pink:
+            return "wav"
+        case .white:
+            return "wav"
+        case .rain:
+            return "mp3"
+        case .none:
+            return ""
+        }
+    }
+}
+
